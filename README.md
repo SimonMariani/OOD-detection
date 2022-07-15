@@ -46,5 +46,5 @@ The datasets can be downloaded and placed in the data directory. Note that some 
 
 ## Results
 
-![alt text](https://github.com/SimonMariani/OOD-detection/blob/main/table.png?raw=true)
+![alt text](https://github.com/SimonMariani/OOD-detection/blob/main/images/table.png?raw=true)
 
