@@ -289,7 +289,7 @@ def get_pytorch_dataset(dataset, data_dir='/mnt/hdd/thesis/data/', transform_tra
         testset = torchvision.datasets.SVHN(root=data_dir, split='test', download=True)
         
     elif dataset == 'sun':  # Use 10000 randomly sampled samples as test set
-        fullset = torchvision.datasets.SUN397(root=data_dir, download=True)
+        fullset = torchvision.datasets.SUN397(root=data_dir, download=False)
         split = [(len(testset)-10000) / len(testset), 10000/len(testset)]
         trainset, testset = random_split(fullset, split=split, seed=seed)
     
@@ -319,8 +319,8 @@ def get_pytorch_dataset(dataset, data_dir='/mnt/hdd/thesis/data/', transform_tra
         testset = torchvision.datasets.LSUN(root=data_dir + 'lsun/', classes='test', transform=transform_test, target_transform=target_transform)
 
     elif dataset == 'lsun_odin':  # Test set is used for ood detection even if it does not have any labels
-        trainset = torchvision.datasets.ImageFolder(root=data_dir + "gram/LSUN_resize")
-        testset = torchvision.datasets.ImageFolder(root=data_dir + 'gram/LSUN_resize')
+        trainset = torchvision.datasets.ImageFolder(root=data_dir + "LSUN_resize")
+        testset = torchvision.datasets.ImageFolder(root=data_dir + 'LSUN_resize')
 
     elif dataset == 'places':  # Val set is used for ood detection (although a lot larger than before) (also no test set available)
         trainset = torchvision.datasets.Places365(root=data_dir + 'places/', split='train-standard', small=True, download=False, transform=transform_train, target_transform=target_transform)
@@ -365,8 +365,8 @@ def get_pytorch_dataset(dataset, data_dir='/mnt/hdd/thesis/data/', transform_tra
         transform_test = transforms.Compose([new_resize] + transform_test.transforms[1:])
 
     elif dataset == 'tiny_imagenet_odin':  # Test set is used for ood detection even if it does not have any labels
-        trainset = torchvision.datasets.ImageFolder(root=data_dir + "gram/Imagenet_resize")
-        testset = torchvision.datasets.ImageFolder(root=data_dir + 'gram/Imagenet_resize')
+        trainset = torchvision.datasets.ImageFolder(root=data_dir + "Imagenet_resize")
+        testset = torchvision.datasets.ImageFolder(root=data_dir + 'Imagenet_resize')
         
     elif dataset == 'imagenet_r': 
         fullset = torchvision.datasets.ImageFolder(root=data_dir + 'imagenet-r/')
