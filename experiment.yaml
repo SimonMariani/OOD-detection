@@ -1,0 +1,50 @@
+### The directories ###
+data_dir: '/mnt/hdd/thesis/data/'
+run_dir: '/mnt/hdd/thesis/runs/'
+results_dir: '/mnt/hdd/thesis/results/'
+
+# The configs dir to use
+configs_dir: './configs_train_cifar10/'
+# configs_dir: './configs_feature/'
+# configs_dir: './configs_train/'
+# configs_dir: './configs_temp/'
+
+
+# config_files: ['cifar10_resnet34_gram_layers.yaml', 'cifar10_resnet34_maha_layers.yaml']
+# config_files: ['cifar10_resnet34_gram_mean.yaml', 'cifar10_resnet34_maha.yaml', 'cifar10_resnet34_gram.yaml', 'cifar10_resnet34_maha_gram.yaml' ]
+# config_files: ['cifar10_resnet34_maha.yaml', 'cifar10_resnet34_maha_pixels.yaml', 'cifar10_resnet34_maha_features.yaml', 'cifar10_resnet34_maha_rp.yaml']
+# config_files: ['cifar10_resnet34_gram_mean.yaml', 'cifar10_resnet34_gram_pixels.yaml', 'cifar10_resnet34_gram_features.yaml', 'cifar10_resnet34_gram_rp.yaml']
+
+# config_files: '/home/simon/thesis/code/configs_train'
+# config_files: '/home/simon/thesis/code/configs_temp'
+# config_files: '/home/simon/thesis/code/configs_train_cifar10'
+
+# config_files: ['cifar10_resnet34_basic.yaml', 'cifar10_resnet34_maha.yaml', 'cifar10_resnet34_basic_nodecay.yaml', 'cifar10_resnet34_maha_nodecay.yaml',
+#                'cifar10_resnet34_basic_mixup.yaml', 'cifar10_resnet34_maha_mixup.yaml', 'cifar10_resnet34_basic_multi.yaml', 'cifar10_resnet34_maha_multi.yaml',
+#                'cifar10_resnet34_basic_nesterov.yaml', 'cifar10_resnet34_maha_nesterov.yaml', 'cifar10_resnet34_basic_penalty.yaml',  'cifar10_resnet34_maha_penalty.yaml',
+#                'cifar10_resnet34_basic_equalize.yaml', 'cifar10_resnet34_maha_equalize.yaml', 'cifar10_resnet34_basic_erase.yaml', 'cifar10_resnet34_maha_erase.yaml', 
+#                'cifar10_resnet34_basic_perspective.yaml', 'cifar10_resnet34_maha_perspective.yaml', 'cifar10_resnet34_basic_augmentpolicy.yaml', 
+#                'cifar10_resnet34_maha_augmentpolicy.yaml', 'cifar10_resnet34_basic_colorjitter.yaml', 'cifar10_resnet34_maha_colorjitter.yaml',
+#                'cifar10_resnet34_basic_blur.yaml', 'cifar10_resnet34_maha_blur.yaml', 'cifar10_resnet34_basic_pretrained.yaml', 'cifar10_resnet34_maha_pretrained.yaml']
+
+config_files: ['cifar10_resnet34_maha.yaml']
+
+# config_files: ['cifar100_resnet34_maha.yaml']
+
+# config_files: ['cifar10_resnet34_basic.yaml', 'cifar10_resnet34_basic_nodecay.yaml',  'cifar10_resnet34_basic_mixup.yaml', 'cifar10_resnet34_basic_multi.yaml',
+#               'cifar10_resnet34_basic_nesterov.yaml', 'cifar10_resnet34_basic_penalty.yaml', 'cifar10_resnet34_basic_equalize.yaml',
+#               'cifar10_resnet34_basic_erase.yaml', 'cifar10_resnet34_basic_perspective.yaml', 'cifar10_resnet34_basic_augmentpolicy.yaml', 
+#               'cifar10_resnet34_basic_colorjitter.yaml', 'cifar10_resnet34_basic_blur.yaml', 'cifar10_resnet34_basic_pretrained.yaml',]
+
+# config_files: ['cifar10_resnet34_maha.yaml', 'cifar10_resnet34_maha_nodecay.yaml', 'cifar10_resnet34_maha_mixup.yaml', 'cifar10_resnet34_maha_multi.yaml',
+#               'cifar10_resnet34_maha_nesterov.yaml', 'cifar10_resnet34_maha_penalty.yaml', 'cifar10_resnet34_maha_equalize.yaml', 
+#               'cifar10_resnet34_maha_erase.yaml', 'cifar10_resnet34_maha_perspective.yaml', 'cifar10_resnet34_maha_augmentpolicy.yaml', 
+#               'cifar10_resnet34_maha_colorjitter.yaml', 'cifar10_resnet34_maha_blur.yaml', 'cifar10_resnet34_maha_pretrained.yaml']
+
+# config_files: ['cifar10_resnet34_basic.yaml', 'cifar10_resnet34_maha.yaml',
+#                 'cifar10_resnet34_basic_erase.yaml', 'cifar10_resnet34_maha_erase.yaml', 
+#                 'cifar10_resnet34_basic_nodecay.yaml', 'cifar10_resnet34_maha_nodecay.yaml',
+#                 'cifar10_resnet34_basic_mixup.yaml', 'cifar10_resnet34_maha_mixup.yaml',]
+
+# config_files: ['cifar10_resnet34_basic_trans_tiny.yaml', 'cifar10_resnet34_maha_trans_tiny.yaml']
+# config_files: ['cifar10_resnet34_basic_trans_lsun.yaml', 'cifar10_resnet34_maha_trans_lsun.yaml']
