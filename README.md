@@ -2,9 +2,10 @@
 
 
 ## Dependencies
-In order to run the code, the dependencies in the unvertainty.yml file must be installed. Note that not all of them are needed for the majority of the functionalities. The main dependencies are as follows and should be enough to run most of the code:
+In order to run the code, the dependencies in the unvertainty.yml file can be installed. However, not all of them are needed for the majority of the functionalities. The main dependencies are enough to run most of the code:
 
 - PyTorch 1.12.0, torchvision 0.13.0, CudaToolkit 11.3
+- yaml 0.2.5, pyyaml 6.0
 - 
 
 
@@ -40,4 +41,4 @@ The datasets can be downloaded and placed in the data directory. Note that some 
 - Omniglot*: https://github.com/brendenlake/omniglot
 - notMNIST: https://www.kaggle.com/datasets/lubaroli/notmnist
 
-* These datasets do not need to be downloaded and will be downloaded automatically if not present in the data folder already
+\* These datasets do not need to be downloaded and will be downloaded automatically if not present in the data folder already
