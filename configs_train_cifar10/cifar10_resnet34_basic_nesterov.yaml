@@ -1,0 +1,134 @@
+# Basic settings
+exp_name: 'cifar10_resnet34_basic_nesterov'
+seed: 42
+
+main_run:
+  # Dataset settings
+  dataset: 'cifar10'  
+  weight_path:
+  class_weights:
+  data_transform:
+  target_transform: 
+  dataset_ood_train: 
+
+  # The model to use and its settings
+  model: 'resnet34' 
+  res_pre: False
+  max_pool: False
+  small_conv: True
+  freeze_until: 0
+  model_out_size: 
+  pretrained_path: 
+
+  # The uncertainty model and its settings
+  model_unc: 'basic'
+  unc_measure: 'max_p'
+  pretrained_path_unc: 
+
+  # Training parameters
+  epochs: 200
+  start_epoch: 0
+  batch_size: 128
+
+  criterion: 'cross_entropy'
+
+  optimizer: 'sgd'
+  lr: 0.1
+  momentum: 0.9
+  dampening: 0  # default : 0
+  weight_decay: 0.0005  # default : 0
+  nesterov: True # default : False 
+
+  scheduler: 'cosine_annealing_lr'
+  t_max: 200
+
+  gradient_penalty: 0
+
+  alpha: 0.0
+
+  save_every: 5
+  save_model: True
+
+inference:  # ['svhn', 'tiny_imagenet', 'lsun', 'places', 'cifar100', 'textures']
+  dataset_ood_test: ['svhn', 'tiny_imagenet', 'lsun', 'places', 'cifar100', 'textures']
+
+  infer_id: True
+  infer_train: False
+
+evaluation:
+  dataset_ood_test: ['svhn', 'tiny_imagenet', 'lsun', 'places', 'cifar100', 'textures']
+
+  
+evaluation_training:
+  dataset_ood_test: ['svhn', 'tiny_imagenet', 'lsun'] 
+
+  epoch_start: 30
+  epoch_end: 100
+  epoch_step: 5
+
+  perform_post: False
+
+decoder:
+  # Pretrained uncertainty model to use
+  pretrained_path: 
+  pretrained_path_unc:
+  pretrained_path_decoder: 
+
+  # Decoder setup
+  forward_type: 'layers'
+  use_layers: [4,5]  
+  num_filt: 64
+
+  # Training parameters
+  epochs: 50
+  start_epoch: 0
+  batch_size: 128
+
+  criterion: 'bce'
+
+  optimizer: 'adam'
+  lr: 0.001
+  weight_decay: 0
+  betas: [0.9, 0.999]  # default
+
+  scheduler: 'multi_step_lr'
+  milestones: [25, 40]
+  gamma: 0.1
+
+  save_every: 5
+
+decoder_inference:
+  # Pretrained uncertainty model to use
+  pretrained_path: '/mnt/hdd/thesis/results/cifar10_resnet34_basic_test/state_dicts/cifar10_resnet34_basic_test_199.pth' 
+  pretrained_path_unc:
+  pretrained_path_decoder: '/mnt/hdd/thesis/results/cifar10_resnet34_basic_test/state_dicts_decoder/cifar10_resnet34_basic_test_decoder_49.pth'
+
+  image_sim_measure: ['euclidean', 'BCE', 'PSNR', 'SSIM', 'LPIPS', 'GMSD', 'MS_GMSD', 'MDSI', 'HaarPSI', 'VSI', 'FSIM']
+  dataset_ood_test: ['svhn', 'tiny_imagenet', 'lsun'] 
+
+
+decoder_evaluation:
+  pretrained_path: '/mnt/hdd/thesis/results/cifar10_resnet34_basic_test/state_dicts/cifar10_resnet34_basic_test_199.pth' 
+  pretrained_path_unc:
+  pretrained_path_decoder: '/mnt/hdd/thesis/results/cifar10_resnet34_basic_test/state_dicts_decoder/cifar10_resnet34_basic_test_decoder_49.pth'
+
+  image_sim_measure: ['euclidean', 'BCE', 'PSNR', 'SSIM', 'LPIPS', 'GMSD', 'MS_GMSD', 'MDSI', 'HaarPSI', 'VSI', 'FSIM']
+  dataset_ood_test: ['svhn', 'tiny_imagenet', 'lsun'] 
+
+
+imagenet_c:
+  pretrained_path_unc: '/mnt/hdd/thesis/results/cifar10_resnet34_basic/state_dicts/cifar10_resnet34_basic_uncertain_post.pth'
+  datasets: ['blur+defocus_blur', 'digital+contrast']
+
+
+check_overlap:
+  configs:  ['cifar10_resnet34_basic.yaml', 'cifar10_resnet34_basic_edge.yaml', 
+              'cifar10_resnet34_basic_center.yaml', 'cifar10_resnet34_basic_mixup.yaml',
+                'cifar10_resnet34_basic_test.yaml', 'cifar10_resnet34_basic_test_decay.yaml',
+               'cifar10_resnet34_basic_pretrained.yaml']
+
+  dataset_ood_test: ['svhn', 'tiny_imagenet', 'lsun'] 
+
+  criteria: #'bacc'
+
+
