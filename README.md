@@ -11,16 +11,6 @@ In order to run the code, the dependencies in the unvertainty.yml file can be in
 - scipy 1.7.3
 - pandas 1.4.3
 
-## Running the code
-The file experiment.yaml contains the information about the config files directory and the config files to run. All the config files for our experiments are also present and can be altered if needed. Note that it differs per method and setup which parameters are necessary to include in the config file.
-This file also contains the paths to the following directories:
-
-- Data directory -> the directory where the datasets are stored
-- Run directory -> the directory to which the indivicual runs are stored
-- Results directory - > the directory to which the runs are stored, this directory is paralel to the run directory and is therefore overwritten after every experiment with the same name.
-
-The files train.py, inference.py and evaluation.py can be ran indiviudally or all at once by running the run.sh file. All the information is extraced from the experiment.yaml file These are the only runnable files, other files might be necessary for more specific setup changes and/or adding new datasets. 
-
 ## Datasets
 The datasets can be downloaded and placed in the data directory. Note that some datasets are fairly large and if only used for OOD detection, only the test/val set is needed. Our codebase supports the following datasets:
 
@@ -44,7 +34,19 @@ The datasets can be downloaded and placed in the data directory. Note that some 
 
 \* These datasets do not need to be downloaded and will be downloaded automatically if not present in the data folder already
 
+## Running the code
+The file experiment.yaml contains the information about the config files directory and the config files to run. All the config files for our experiments are also present and can be altered if needed. Note that it differs per method and setup which parameters are necessary to include in the config file.
+This file also contains the paths to the following directories:
+
+- Data directory -> the directory where the datasets are stored
+- Run directory -> the directory to which the indivicual runs are stored
+- Results directory - > the directory to which the runs are stored, this directory is paralel to the run directory and is therefore overwritten after every experiment with the same name.
+
+The files train.py, inference.py and evaluation.py can be ran indiviudally or all at once by running the run.sh file. All the information is extraced from the experiment.yaml file These are the only runnable files, other files might be necessary for more specific setup changes and/or adding new datasets. 
+
 ## Results
+
+The following table shows some of the OOD detection results also present in our paper. Other images that we used are present in the 'images' folder.
 
 ![alt text](https://github.com/SimonMariani/OOD-detection/blob/main/images/table.png?raw=true)
 
