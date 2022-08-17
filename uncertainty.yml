@@ -195,4 +195,4 @@ dependencies:
     - tabulate==0.8.9
     - threadpoolctl==3.1.0
     - tifffile==2022.5.4
-prefix: /home/simon/miniconda3/envs/uncertainty
+prefix: /home/miniconda3/envs/uncertainty

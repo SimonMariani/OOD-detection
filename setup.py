@@ -74,7 +74,7 @@ def get_experiment(experiment='experiment.yaml', return_dirs=False):
 
 ### Data setup functions ###
 
-def get_data_id(config, data_dir='/mnt/hdd/thesis/data/', seed=42, device='cuda:0', train=True):
+def get_data_id(config, data_dir='/mnt/hdd/data/', seed=42, device='cuda:0', train=True):
     r"""
     Returns dataset objects for all the specified datasets, it also returns the number of classes corresponding to
     the training data.
@@ -124,7 +124,7 @@ def get_data_id(config, data_dir='/mnt/hdd/thesis/data/', seed=42, device='cuda:
 
     return trainloader, testloader, num_classes
 
-def get_data_ood(config, datasets=[None], data_dir='/mnt/hdd/thesis/data/', seed=42, device='cuda:0'):
+def get_data_ood(config, datasets=[None], data_dir='/mnt/hdd/data/', seed=42, device='cuda:0'):
     r"""
     Returns dataset objects for all the specified datasets, it also returns the number of classes corresponding to
     the training data.
@@ -251,7 +251,7 @@ def get_target_transform(config, num_classes):
     return target_transform, target_transform_out
 
 
-def get_pytorch_dataset(dataset, data_dir='/mnt/hdd/thesis/data/', transform_train=None, transform_test=None, target_transform=None, 
+def get_pytorch_dataset(dataset, data_dir='/mnt/hdd/data/', transform_train=None, transform_test=None, target_transform=None, 
                         seed=42, split=[0.8, 0.2], ):
     r"""
     Returns a dataset as a PyTorch Dataset object. Note that some datasets can be downloaded automatically via PyTorch while
