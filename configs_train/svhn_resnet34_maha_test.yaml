@@ -18,7 +18,7 @@ main_run:
   small_conv: True
   freeze_until: 0
   model_out_size: 
-  pretrained_path: '/mnt/hdd/thesis/results/svhn_resnet34_basic_test/state_dicts/svhn_resnet34_basic_test_29.pth'
+  pretrained_path: '/mnt/hdd/results/svhn_resnet34_basic_test/state_dicts/svhn_resnet34_basic_test_29.pth'
 
   # The uncertainty settings
   model_unc: 'maha'
@@ -48,7 +48,7 @@ evaluation: #  ['svhn', 'tiny_imagenet', 'tiny_imagenet_nearest', 'tiny_imagenet
   dataset_ood_test: ['cifar10', 'tiny_imagenet', 'lsun', 'places', 'cifar100', 'textures'] 
   
 evaluation_training:
-  pretrained_path_unc: '/mnt/hdd/thesis/results/cifar10_resnet34_maha/state_dicts/'
+  pretrained_path_unc: '/mnt/hdd/results/cifar10_resnet34_maha/state_dicts/'
   dataset_ood_test: ['svhn', 'tiny_imagenet']
 
   epoch_start: 0
@@ -59,7 +59,7 @@ evaluation_training:
 
 decoder:
   # Pretrained uncertainty model to use
-  pretrained_path_unc: '/mnt/hdd/thesis/results/cifar10_resnet34_maha/state_dicts/cifar10_resnet34_maha_uncertain_post.pth'
+  pretrained_path_unc: '/mnt/hdd/results/cifar10_resnet34_maha/state_dicts/cifar10_resnet34_maha_uncertain_post.pth'
 
   # Decoder setup
   forward_type: 'layers'
@@ -86,24 +86,24 @@ decoder:
   save_every: 1
 
 decoder_inference:
-  pretrained_path_unc: '/mnt/hdd/thesis/results/cifar10_resnet34_maha/state_dicts/cifar10_resnet34_maha_uncertain_post.pth'
-  pretrained_path_decoder: '/mnt/hdd/thesis/results/cifar10_resnet34_basic/state_dicts_decoder/cifar10_resnet34_basic_decoder_0.pth'
+  pretrained_path_unc: '/mnt/hdd/results/cifar10_resnet34_maha/state_dicts/cifar10_resnet34_maha_uncertain_post.pth'
+  pretrained_path_decoder: '/mnt/hdd/results/cifar10_resnet34_basic/state_dicts_decoder/cifar10_resnet34_basic_decoder_0.pth'
 
   image_sim_measure: ['LPIPS', 'GMSD']
   dataset_ood_test: ['svhn', 'tiny_imagenet']
 
 
 decoder_evaluation:
-  pretrained_path_unc: '/mnt/hdd/thesis/results/cifar10_resnet34_basic/state_dicts/cifar10_resnet34_basic_uncertain_post.pth'
-  pretrained_path_decoder: '/mnt/hdd/thesis/results/cifar10_resnet34_basic/state_dicts_decoder/cifar10_resnet34_basic_decoder_0.pth'
-  inference_dir: '/mnt/hdd/thesis/results/cifar10_resnet34_basic/inference_decoder/'
+  pretrained_path_unc: '/mnt/hdd/results/cifar10_resnet34_basic/state_dicts/cifar10_resnet34_basic_uncertain_post.pth'
+  pretrained_path_decoder: '/mnt/hdd/results/cifar10_resnet34_basic/state_dicts_decoder/cifar10_resnet34_basic_decoder_0.pth'
+  inference_dir: '/mnt/hdd/results/cifar10_resnet34_basic/inference_decoder/'
 
   image_sim_measure: ['LPIPS', 'GMSD']
   dataset_ood_test: ['svhn', 'tiny_imagenet'] 
 
 
 imagenet_c:
-  pretrained_path_unc: '/mnt/hdd/thesis/results/cifar10_resnet34_basic/state_dicts/cifar10_resnet34_basic_uncertain_post.pth'
+  pretrained_path_unc: '/mnt/hdd/results/cifar10_resnet34_basic/state_dicts/cifar10_resnet34_basic_uncertain_post.pth'
   datasets: ['blur+defocus_blur', 'digital+contrast']
 
   

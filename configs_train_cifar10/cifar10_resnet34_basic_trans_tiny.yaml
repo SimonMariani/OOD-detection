@@ -98,25 +98,25 @@ decoder:
 
 decoder_inference:
   # Pretrained uncertainty model to use
-  pretrained_path: '/mnt/hdd/thesis/results/cifar10_resnet34_basic_test/state_dicts/cifar10_resnet34_basic_test_199.pth' 
+  pretrained_path: '/mnt/hdd/results/cifar10_resnet34_basic_test/state_dicts/cifar10_resnet34_basic_test_199.pth' 
   pretrained_path_unc:
-  pretrained_path_decoder: '/mnt/hdd/thesis/results/cifar10_resnet34_basic_test/state_dicts_decoder/cifar10_resnet34_basic_test_decoder_49.pth'
+  pretrained_path_decoder: '/mnt/hdd/results/cifar10_resnet34_basic_test/state_dicts_decoder/cifar10_resnet34_basic_test_decoder_49.pth'
 
   image_sim_measure: ['euclidean', 'BCE', 'PSNR', 'SSIM', 'LPIPS', 'GMSD', 'MS_GMSD', 'MDSI', 'HaarPSI', 'VSI', 'FSIM']
   dataset_ood_test: ['svhn', 'tiny_imagenet', 'lsun'] 
 
 
 decoder_evaluation:
-  pretrained_path: '/mnt/hdd/thesis/results/cifar10_resnet34_basic_test/state_dicts/cifar10_resnet34_basic_test_199.pth' 
+  pretrained_path: '/mnt/hdd/results/cifar10_resnet34_basic_test/state_dicts/cifar10_resnet34_basic_test_199.pth' 
   pretrained_path_unc:
-  pretrained_path_decoder: '/mnt/hdd/thesis/results/cifar10_resnet34_basic_test/state_dicts_decoder/cifar10_resnet34_basic_test_decoder_49.pth'
+  pretrained_path_decoder: '/mnt/hdd/results/cifar10_resnet34_basic_test/state_dicts_decoder/cifar10_resnet34_basic_test_decoder_49.pth'
 
   image_sim_measure: ['euclidean', 'BCE', 'PSNR', 'SSIM', 'LPIPS', 'GMSD', 'MS_GMSD', 'MDSI', 'HaarPSI', 'VSI', 'FSIM']
   dataset_ood_test: ['svhn', 'tiny_imagenet', 'lsun'] 
 
 
 imagenet_c:
-  pretrained_path_unc: '/mnt/hdd/thesis/results/cifar10_resnet34_basic/state_dicts/cifar10_resnet34_basic_uncertain_post.pth'
+  pretrained_path_unc: '/mnt/hdd/results/cifar10_resnet34_basic/state_dicts/cifar10_resnet34_basic_uncertain_post.pth'
   datasets: ['blur+defocus_blur', 'digital+contrast']
 
 
