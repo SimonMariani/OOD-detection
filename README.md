@@ -46,7 +46,7 @@ The files train.py, inference.py and evaluation.py can be ran indiviudally or al
 
 ## Results
 
-The following table shows some of the OOD detection results also present in our paper. More details about the exact implementation and parameters can be found in our paper. Some decisions regarding the use of OOD and the preprocessing of datasets led to different performance than reported by the authors of the original methods.
+The following table shows some of the OOD detection results also present in our paper. More details about the exact implementation and parameters can be found in our paper. Some decisions regarding the use of OOD and the preprocessing of datasets led to different performance than reported by the authors of the original methods. The full paper is available at https://www.scitepress.org/PublicationsDetail.aspx?ID=oL4oNKIB6d8=&t=1
 
 ![alt text](https://github.com/SimonMariani/OOD-detection/blob/main/images/table.png?raw=true)
 
